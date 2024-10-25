@@ -6,7 +6,7 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-image: url('./assets/christmas-background.jpg');
+    background-image: url('../assets/christmas-background.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -51,36 +51,20 @@
             word-wrap: break-word;
         }
 
-/* Media query dla mniejszych ekranów */
+/* Media query dla mniejszych ekranów (telefony) */
 @media (max-width: 768px) {
     .calendar-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 kolumny na tablety */
-        padding: 10px;
+        grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+        gap: 5px;
+        max-width: 100vw; /* Pełna szerokość */
+        max-height: 100vh; /* Pełna wysokość */
     }
 
     .calendar-day {
-        font-size: 20px;
-        padding-top: 100%;
+        padding-top: calc(100vh / 3 - 10px); /* Wysokość kafelka równa 1/3 wysokości ekranu minus odstępy */
     }
 
         .calendar-day .content {
-            font-size: 1.8em; /* Zmniejszony rozmiar tekstu na tabletach */
-        }
-}
-
-@media (max-width: 480px) {
-    .calendar-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 kolumny na telefonach */
-        max-width: 100%;
-        background-size: cover;
-    }
-
-    .calendar-day {
-        font-size: 16px;
-        padding-top: 100%;
-    }
-
-        .calendar-day .content {
-            font-size: 1.5em; /* Jeszcze mniejszy rozmiar tekstu na telefonach */
+            font-size: 1.5em; /* Dopasowanie rozmiaru tekstu na mniejszych ekranach */
         }
 }
