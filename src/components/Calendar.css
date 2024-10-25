@@ -1,71 +1,71 @@
 /* Kalendarz na większych ekranach */
-.calendar-grid {
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../assets/christmas-background.jpg'); /* Tło */
+    background-size: cover; /* Tło wypełnia cały ekran */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Tło jest nieruchome */
+    min-height: 100vh; /* Minimum wysokość to 100% ekranu */
+  }
+  
+  .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
     gap: 10px;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    background-image: url('../assets/christmas-background.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.calendar-day {
+    padding: 10px;
+    z-index: 1; /* Ustawienie kafelków nad tłem */
+    position: relative; /* Kafelki w układzie siatki */
+  }
+  
+  .calendar-day {
     width: 100%;
-    padding-top: 100%;
+    padding-top: 100%; /* Proporcja kwadratu */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    background-color: rgba(240, 240, 240, 0.8);
+    background-color: rgba(240, 240, 240, 0.9); /* Lekko przezroczyste kafelki */
     border: 2px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px; /* Delikatne zaokrąglenie */
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-    .calendar-day .content {
-        font-size: 2em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        text-align: center;
-        color: #333;
-    }
-
-        /* Styl niespodzianki */
-        .calendar-day .content.surprise {
-            font-size: 1.2em;
-            color: #ff6f61;
-            font-weight: bold;
-            padding: 5px;
-            word-wrap: break-word;
-        }
-
-/* Media query dla mniejszych ekranów (telefony) */
-@media (max-width: 768px) {
+  }
+  
+  .calendar-day .content {
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Media query dla mniejszych ekranów (telefony) */
+  @media (max-width: 768px) {
     .calendar-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 kolumny na telefonach */
-        gap: 5px;
-        width: 100vw; /* Pełna szerokość na urządzeniach mobilnych */
-        height: 100vh; /* Pełna wysokość na urządzeniach mobilnych */
-        padding: 0;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolumny na telefonach */
+      gap: 5px;
+      width: 100vw; /* Pełna szerokość na urządzeniach mobilnych */
+      padding: 0;
     }
-
+  
     .calendar-day {
-        padding-top: calc(100vh / 3 - 10px); /* Wysokość kafelka równa 1/3 wysokości ekranu minus odstępy */
+      padding-top: calc(100vh / 3 - 10px); /* Wysokość kafelka równa 1/3 wysokości ekranu minus odstępy */
     }
-
-        .calendar-day .content {
-            font-size: 1.5em; /* Zmniejszony rozmiar tekstu na mniejszych ekranach */
-        }
-}
+  
+    .calendar-day .content {
+      font-size: 1.5em; /* Zmniejszony rozmiar tekstu na mniejszych ekranach */
+    }
+  }
+  
