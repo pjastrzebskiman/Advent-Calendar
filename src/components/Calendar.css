@@ -1,13 +1,19 @@
+/* Kalendarz na większych ekranach */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
     max-width: 600px;
     margin: 0 auto;
-    padding: 10px;
-  }
-  
-  .calendar-day {
+    padding: 20px;
+    background-image: url('./assets/christmas-background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-day {
     width: 100%;
     padding-top: 100%;
     position: relative;
@@ -15,58 +21,66 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    background-color: #f0f0f0;
+    background-color: rgba(240, 240, 240, 0.8);
     border: 2px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .calendar-day .content {
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    color: #333;
-  }
-  
-  .calendar-day.opened .content {
-    color: #fff;
-  }
-  
-  .calendar-day.locked {
-    background-color: #d3d3d3;
-    color: #888;
-    cursor: not-allowed;
-  }
-  
-  .calendar-day:hover:not(.opened):not(.locked) {
-    background-color: #d0d0d0;
-  }
-  
-  /* Specjalny styl dla niespodzianki */
-  .calendar-day .content.surprise {
-    font-size: 1.2em; /* Dopasowanie rozmiaru, aby mieścił się w kafelku */
-    color: #ff6f61; /* Kontrastowy kolor */
-    font-weight: bold;
-    padding: 5px;
-    word-wrap: break-word; /* Złamie dłuższe słowa, jeśli potrzeba */
-  }
-  
-  /* Media query dla mniejszych ekranów */
-  @media (max-width: 600px) {
-    .calendar-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  
+}
+
     .calendar-day .content {
-      font-size: 1.5em;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: #333;
     }
-  }
-  
+
+        /* Styl niespodzianki */
+        .calendar-day .content.surprise {
+            font-size: 1.2em;
+            color: #ff6f61;
+            font-weight: bold;
+            padding: 5px;
+            word-wrap: break-word;
+        }
+
+/* Media query dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 kolumny na tablety */
+        padding: 10px;
+    }
+
+    .calendar-day {
+        font-size: 20px;
+        padding-top: 100%;
+    }
+
+        .calendar-day .content {
+            font-size: 1.8em; /* Zmniejszony rozmiar tekstu na tabletach */
+        }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolumny na telefonach */
+        max-width: 100%;
+        background-size: cover;
+    }
+
+    .calendar-day {
+        font-size: 16px;
+        padding-top: 100%;
+    }
+
+        .calendar-day .content {
+            font-size: 1.5em; /* Jeszcze mniejszy rozmiar tekstu na telefonach */
+        }
+}
