@@ -6,7 +6,7 @@ function Calendar({ openedDays, onOpenDay, currentDay, currentOpenedDay }) {
     <div className="calendar-grid">
       {Array.from({ length: 24 }).map((_, index) => {
         const day = index + 1;
-        const isAvailable = day === currentDay;
+        const isAvailable = day <= currentDay;
 
         return (
           <div

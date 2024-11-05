@@ -24,6 +24,10 @@ function App() {
 
   return (
     <div className="App">
+       <div className="header-text">
+      <h1>Ho Ho Ho Czas zacząć świąteczne odliczanie</h1>
+      <h2>Otwórz razem z nami swój kalendarz adwentwoy i zgarnij kody rabatowe</h2>
+      </div>
       <Calendar
         openedDays={openedDays}
         onOpenDay={handleOpenDay}

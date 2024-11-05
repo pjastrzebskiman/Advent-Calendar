@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -11,4 +13,26 @@
   background-position: center;
   background-attachment: fixed; /* Tło jest stałe podczas przewijania */
   color: #fff; /* Ustawienie koloru tekstu na biały dla lepszego kontrastu */
+}
+.header-text h1 {
+  font-family: 'Mountains of Christmas', cursive; /* Świąteczna czcionka */
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień, aby tekst był bardziej widoczny */
+  font-size: 2.5em; /* Możesz dostosować rozmiar */
+  margin-bottom: 10px;
+  text-align: center;
+}
+.header-text h2 {
+  font-family: 'Mountains of Christmas', cursive; /* Świąteczna czcionka */
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień, aby tekst był bardziej widoczny */
+  font-size: 1.5em; /* Możesz dostosować rozmiar */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header-text p {
+  font-family: 'Mountains of Christmas', cursive; /* Świąteczna czcionka */
+  color: #FFD700; /* Złoty kolor tekstu */
+  text-align: center;
 }
