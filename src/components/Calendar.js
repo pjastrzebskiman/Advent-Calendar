@@ -19,7 +19,7 @@ function Calendar({ openedDays, onOpenDay, currentDay, currentOpenedDay }) {
             }}
           >
             <span className={`content ${currentOpenedDay === index ? 'surprise' : ''}`}>
-              {openedDays[index] ? (currentOpenedDay === index ? 'SFD245' : `🎁`) : day}
+              {openedDays[index] ? (currentOpenedDay === index ? 'KOD234' : `🎁`) : day}
             </span>
           </div>
         );
