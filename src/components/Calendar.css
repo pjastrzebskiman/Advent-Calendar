@@ -84,3 +84,52 @@ body {
       font-size: 1.5em; /* Zmniejszony rozmiar tekstu na mniejszych ekranach */
     }
 }
+
+/* Styl dla modalnego tła */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  z-index: 1000;
+}
+
+/* Styl dla modalnego okna */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%; /* Szerokość dopasowana do ekranu */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styl tekstu w modalnym oknie */
+.modal-content p {
+  margin: 0 0 20px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Styl przycisku w modalnym oknie */
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #ff6f61; /* Kolor przycisku */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #e65b50; /* Kolor przycisku po najechaniu */
+}
