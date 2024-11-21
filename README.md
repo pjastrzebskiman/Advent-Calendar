@@ -1,7 +1,7 @@
-🎄 Advent Calendar App
+#🎄 Advent Calendar App
 A React-based Advent Calendar application designed to make the countdown to Christmas fun and interactive! Each day of December unlocks a surprise, with custom content for users to enjoy throughout the festive season.
 
-🌟 Features
+#🌟 Features
 Daily Surprises: Unlock new content each day from December 1st to 24th.
 User-Friendly Design: Simple and intuitive interface for all ages.
 Responsive Layout: Works seamlessly on desktop, tablet, and mobile devices.
