@@ -2,6 +2,8 @@
 
 A **React-based Advent Calendar** application designed to make the countdown to Christmas fun and interactive! Each day of December unlocks a surprise, with custom content for users to enjoy throughout the festive season.
 
+👉 **Live Demo**: [Advent Calendar App](https://powerlifting-advent-calendar.onrender.com/)
+
 ---
 
 ## 🌟 Features
