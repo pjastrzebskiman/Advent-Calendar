@@ -37,3 +37,14 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/advent-calendar-app.git
    cd advent-calendar-app
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+3. Run the application:
+   ```bash
+   npm start
+   # or
+   yarn start
+4. Open your browser at http://localhost:3000.
